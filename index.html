@@ -11,7 +11,7 @@
   <body>
     <div class="heading_div col-lg-6 col-md-6 col-sm-6 col-xs-12">
       <h1>
-        <button id="howtoplay" onclick="rules()">
+        <button id="howtoplay" data-toggle="modal" data-target="#myModal">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
@@ -32,7 +32,8 @@
     ></div>
     <div
       data-guess-grid
-      class="guess-grid col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      class="guess-grid col-lg-6 col-md-6 col-sm-6 col-xs-12"
+    >
       <div class="tile"></div>
       <div class="tile"></div>
       <div class="tile"></div>
