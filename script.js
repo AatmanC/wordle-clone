@@ -15484,3 +15484,11 @@ function danceTiles(tiles) {
     }, (index * DANCE_ANIMATION_DURATION) / 5)
   })
 }
+
+function rules(){
+  window.location = "rules.html"
+}
+
+function back(){
+  window.location = "index.html"
+}

@@ -206,3 +206,31 @@ body {
 .alert.hide {
   opacity: 0;
 }
+
+h1{
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+#howtoplay{
+  width: 40px;
+  display: inline-block;
+  margin-right: 25px;
+  height: 40px;
+}
+
+#settingsbtn{
+  margin-left: 25px;
+  height: 40px;
+  width: 40px;
+}
+
+.version{
+  color: white;
+  text-align: right;
+}
+
+.howtoplay{
+  color: white;
+}

@@ -1,82 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-  <title>Wordle Clone</title>
-</head>
-<body>
-  <div class="alert-container" data-alert-container></div>
-  <div data-guess-grid class="guess-grid">
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-  </div>
-  <div data-keyboard class="keyboard">
-    <button class="key" data-key="Q">Q</button>
-    <button class="key" data-key="W">W</button>
-    <button class="key" data-key="E">E</button>
-    <button class="key" data-key="R">R</button>
-    <button class="key" data-key="T">T</button>
-    <button class="key" data-key="Y">Y</button>
-    <button class="key" data-key="U">U</button>
-    <button class="key" data-key="I">I</button>
-    <button class="key" data-key="O">O</button>
-    <button class="key" data-key="P">P</button>
-    <div class="space"></div>
-    <button class="key" data-key="A">A</button>
-    <button class="key" data-key="S">S</button>
-    <button class="key" data-key="D">D</button>
-    <button class="key" data-key="F">F</button>
-    <button class="key" data-key="G">G</button>
-    <button class="key" data-key="H">H</button>
-    <button class="key" data-key="J">J</button>
-    <button class="key" data-key="K">K</button>
-    <button class="key" data-key="L">L</button>
-    <div class="space"></div>
-    <button data-enter class="key large">Enter</button>
-    <button class="key" data-key="Z">Z</button>
-    <button class="key" data-key="X">X</button>
-    <button class="key" data-key="C">C</button>
-    <button class="key" data-key="V">V</button>
-    <button class="key" data-key="B">B</button>
-    <button class="key" data-key="N">N</button>
-    <button class="key" data-key="M">M</button>
-    <button data-delete class="key large">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-        <path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
-      </svg>
-    </button>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>WORDS WORLD</title>
+  </head>
+  <body>
+    <div class="heading_div col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <h1>
+        <button id="howtoplay" onclick="rules()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              fill="var(--color-tone-3)"
+              d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+            ></path>
+          </svg></button
+        >WORDS WORLD
+      </h1>
+    </div>
+    <div
+      class="alert-container col-lg-6 col-md-6 col-sm-6 col-xs-12"
+      data-alert-container
+    ></div>
+    <div
+      data-guess-grid
+      class="guess-grid col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+    <div data-keyboard class="keyboard col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <button class="key" data-key="Q">Q</button>
+      <button class="key" data-key="W">W</button>
+      <button class="key" data-key="E">E</button>
+      <button class="key" data-key="R">R</button>
+      <button class="key" data-key="T">T</button>
+      <button class="key" data-key="Y">Y</button>
+      <button class="key" data-key="U">U</button>
+      <button class="key" data-key="I">I</button>
+      <button class="key" data-key="O">O</button>
+      <button class="key" data-key="P">P</button>
+      <div class="space"></div>
+      <button class="key" data-key="A">A</button>
+      <button class="key" data-key="S">S</button>
+      <button class="key" data-key="D">D</button>
+      <button class="key" data-key="F">F</button>
+      <button class="key" data-key="G">G</button>
+      <button class="key" data-key="H">H</button>
+      <button class="key" data-key="J">J</button>
+      <button class="key" data-key="K">K</button>
+      <button class="key" data-key="L">L</button>
+      <div class="space"></div>
+      <button data-enter class="key large">Enter</button>
+      <button class="key" data-key="Z">Z</button>
+      <button class="key" data-key="X">X</button>
+      <button class="key" data-key="C">C</button>
+      <button class="key" data-key="V">V</button>
+      <button class="key" data-key="B">B</button>
+      <button class="key" data-key="N">N</button>
+      <button class="key" data-key="M">M</button>
+      <button data-delete class="key large">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path
+            fill="var(--color-tone-1)"
+            d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal">&times;</button>
+            <h3>How to play?</h3>
+            <hr />
+          </div>
+          <div class="modal-body">
+            <p>
+              - This game is a brain wracking and a really fun game in which you
+              have to guess a 5 letter word in 6 guesses and that 5 letter word
+              is refreshed everyday.
+              <br />
+              - Yellow colour signifies the correct letter but it is at the
+              wrong place.
+              <br />
+              - Green colour signifies the correct letter and also that it is at
+              the right place
+              <br />
+              - Black colour signifies the wrong letter and means that, that
+              particular letter is not there in the final word.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4 class="version">Version1.1</h4>
+  </body>
 </html>
